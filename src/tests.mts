@@ -6,4 +6,4 @@ const assert = (actual: unknown, expected: unknown) => {
   }
 };
 
-assert("foo", thingToTest());
+assert("bar", thingToTest());
