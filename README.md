@@ -1,2 +1,3 @@
-# priority-queue
+# Priority Queue
+
 Priority Queue

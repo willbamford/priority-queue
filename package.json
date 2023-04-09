@@ -1,0 +1,20 @@
+{
+  "name": "priority-queue",
+  "version": "1.0.0",
+  "description": "Priority Queue",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "watch": "tsc --watch",
+    "build": "tsc",
+    "test": "ts-node --esm src/tests.mts"
+  },
+  "repository": "git@github.com:willbamford/priority-queue.git",
+  "author": "Will Bamford <will.bamford@moonpig.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  }
+}

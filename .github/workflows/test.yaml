@@ -1,0 +1,22 @@
+name: Test
+
+on:
+  workflow_dispatch: # manual trigger
+  push:
+
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-20.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+
+      - run: yarn install --immutable
+
+      - run: yarn test
