@@ -1,9 +1,30 @@
-import { thingToTest } from "./index.mjs";
+import { priorityQueue } from "./index.mjs";
 
-const assert = (actual: unknown, expected: unknown) => {
+const test = (title: string, actual: unknown, expected: unknown) => {
   if (actual != expected) {
-    throw new Error(`expected: ${expected}, received: ${actual}`);
+    console.log(`❌ ${title}. expected=${expected}, actual=${actual}`);
+    process.exit(1);
   }
+
+  console.log(`✅ ${title} (${expected})`);
 };
 
-assert("bar", thingToTest());
+{
+  type Item = string;
+  console.log("Testing with String type");
+
+  const q = priorityQueue<Item>();
+
+  q.insert("foo", 1);
+
+  test("peek() is 'foo'", q.peek(), "foo");
+  test("not empty", q.isEmpty(), false);
+  test("size is 1", q.size(), 1);
+
+  q.insert("bar", 0.5);
+  q.insert("baz", 1.5);
+
+  test("peek() is 'bar'", q.peek(), "bar");
+  test("queue not empty", q.isEmpty(), false);
+  test("size is 3", q.size(), 3);
+}
