@@ -1,8 +1,9 @@
 {
-  "name": "priority-queue",
-  "version": "1.0.0",
-  "description": "Priority Queue",
+  "name": "prioq",
+  "version": "1.1.0",
+  "description": "TypeScript Priority Queue",
   "main": "dist/index.js",
+  "types": "dist/index.d.mts",
   "type": "module",
   "scripts": {
     "watch": "tsc --watch",
@@ -10,7 +11,7 @@
     "test": "ts-node --esm src/tests.mts"
   },
   "repository": "git@github.com:willbamford/priority-queue.git",
-  "author": "Will Bamford <will.bamford@moonpig.com>",
+  "author": "Will Bamford <w.bamford@gmail.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
