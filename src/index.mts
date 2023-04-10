@@ -36,8 +36,8 @@ export const priorityQueue = <T extends unknown>(): PriorityQueue<T> => {
 
     size: () => heap.length,
 
-    insert: (item, prio) => {
-      heap.push({ key: prio, value: item });
+    insert: (item, priority) => {
+      heap.push({ key: priority, value: item });
 
       let i = heap.length - 1;
       while (i > 0) {
