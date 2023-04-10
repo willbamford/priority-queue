@@ -32,4 +32,4 @@ q.isEmpty(); // true
 
 ## Credit
 
-- [Wim Jongeneel's](https://wim-jongeneel.medium.com/)
+- [Wim Jongeneel](https://wim-jongeneel.medium.com/)
